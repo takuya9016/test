@@ -11,6 +11,6 @@ self.addEventListener('push', function(event) {
           body: message,  
           icon: icon,  
           tag: notificationTag  
-        });  
+        })
   );  
 });
