@@ -7,7 +7,7 @@ self.addEventListener('push', function(event) {
         var notificationTag = data.notification.tag;
 
   event.waitUntil(  
-    return self.registration.showNotification(title, {  
+    self.registration.showNotification(title, {  
           body: message,  
           icon: icon,  
           tag: notificationTag  
