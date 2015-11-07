@@ -15,7 +15,7 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
     window.location.protocol = "https";
     
 var isPushEnabled = false;
-
+var endpoint;
 window.addEventListener('load', function() {  
   var pushButton = document.querySelector('.js-push-button');  
   pushButton.addEventListener('click', function() {  
@@ -176,6 +176,7 @@ function unsubscribe() {
 function sendSubscriptionToServer(ID){
 var regID = document.querySelector('.RegID');
 regID.textContent= ID.endpoint.split("/").slice(-1);
+endpoint = ID.endpoint.split("/").slice(-1);
 }
 		</script>
   </head>
